@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	   <meta charset="UTF-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <title>Simple Table: ID and Name</title>
+	</head>   
+  <body>
+	    <table border="1">
+		  <tr>
+		    <td>Full-Name</td>
+			<td><input type="text"></td>
+		  </tr>
+		  <tr>
+		    <td>Id</td>
+			<td><input type="number"></td>
+		  </tr>
+		  <tr>
+		    <td>Email</td>
+			<td><input type="email"></td>
+		  </tr>
+		  <tr>
+		    <td>Password</td>
+			<td><input type="password"></td>
+		  </tr>
+		  <tr>
+		    <td>Date of Birth</td>
+			<td><input type="date"></td>
+		  </tr>
+		  <tr>
+		    <td>Gender</td>
+			<td>
+			   <label>male</label>
+			   <input type="radio" name="Gender">
+			   <label>female</label>
+			   <input type="radio" name="Gender">
+			</td>
+		  </tr>
+		  <tr>
+		    <td>Skill</td>
+			<td>
+			   <label>HTML</label>
+			   <input type="checkbox" />
+			   <label>JAVA</label>
+			   <input type="checkbox" />
+			   <label>PYTHON</label>
+			   <input type="checkbox" />
+			   <label>JS</label>
+			   <input type="checkbox" />
+			</td>
+		  </tr>
+		  <tr>
+		    <td>Address</td>
+			<td><input type="text-area" /></td>
+		  </tr>
+		  <tr>
+		    <td>Department</td>
+			<td>
+			  <select>
+			    <option>CSE</option>
+				<option>EEE</option>
+				<option>BBA</option>
+			  </select>
+            </td>
+          </tr>	
+          <tr>
+                <td><label for="image">Upload Image:</label></td>
+                <td><input type="file" id="image" name="image"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="button" value="Click" onclick="alert('Button Clicked!')">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </body>	
+</html>
