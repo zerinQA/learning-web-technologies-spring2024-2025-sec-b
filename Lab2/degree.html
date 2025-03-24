@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Validation</title>
+</head>
+<body>
+    <form id="degreeForm">
+        <label for="degree">Select Degree: </label>
+        <select id="degree" name="degree" required>
+            <option value="">--Select--</option>
+            <option value="Bachelors">Bachelors</option>
+            <option value="Masters">Masters</option>
+            <option value="PhD">PhD</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("degreeForm").addEventListener("submit", function(event) {
+            const degree = document.getElementById("degree").value;
+            if (!degree) {
+                event.preventDefault();
+                alert("Please select a degree.");
+            }
+        });
+    </script>
+</body>
+</html>

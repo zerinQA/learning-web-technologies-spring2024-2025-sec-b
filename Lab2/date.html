@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Validation</title>
+</head>
+<body>
+    <form id="dateForm">
+        <label for="date">Date (dd/mm/yyyy): </label>
+        <input type="text" id="date" name="date" placeholder="dd/mm/yyyy" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById("dobForm").addEventListener("submit", function(event) {
+            const dob = document.getElementById("dob").value;
+
+            // Regular Expression to validate dd/mm/yyyy format
+            const dobRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d\d$/;
+            
+            if (!dob) {
+                event.preventDefault();
+                alert("Date of birth cannot be empty.");
+                return;
+            }
+
+            if (!dobRegex.test(dob)) {
+                event.preventDefault();
+                alert("Invalid date format. Please use dd/mm/yyyy.");
+                return;
+            }
+
+        });
+    </script>
+</body>
+</html>

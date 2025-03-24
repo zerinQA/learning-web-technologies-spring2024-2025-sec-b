@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Validation</title>
+</head>
+<body>
+    <form id="nameForm">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById("profileForm").addEventListener("submit", function(event))
+            // Validate Name
+            const name = document.getElementById("name").value;
+            if (!name || name.split(" ").length < 2) {
+                event.preventDefault();
+                alert("Name must contain at least two words.");
+                return;
+            }
+    </script>
+</body>
+</html>
